@@ -1,0 +1,17 @@
+package prPruebas;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class T5E5 {
+
+	public static void main(String[] args) {
+		int [] k={100,200,300,400,200,100,300,500};
+		System.out.println("Escribe el tamaño del deposito:");
+		Scanner teclado = new Scanner (System. in);
+		int M=teclado.nextInt();
+		System.out.println(M);
+		for(int i=0;i<k.length;i++)System.out.print(k[i]+" ");
+	}
+
+}

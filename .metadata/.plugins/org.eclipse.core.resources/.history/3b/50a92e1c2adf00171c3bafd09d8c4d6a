@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.math.*;
+
+public class PruebaDosObj {
+	static List<int[]> lista = new LinkedList<int[]>();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int Long = 4;
+		lista.add(new int[Long]);
+		int cont=0;
+		while(cont<Long) {
+			agnadir(cont,(new int[Long]),Long);
+			cont++;
+		}
+		
+		for(int[] ver : lista)
+		System.out.println(Arrays.toString(ver));
+	}
+	private static void agnadir(int cont, int[] array, int tam) {
+		// TODO Auto-generated method stub
+		int[] aux = Arrays.copyOf(array, tam);
+		if(cont<tam) {
+			aux[cont]=1;
+			lista.add(aux.clone());
+			for(int i=cont+1;i<tam;i++) {
+				agnadir(i,aux, tam);
+				aux[i]=0;
+			}
+		}
+		
+	}
+}

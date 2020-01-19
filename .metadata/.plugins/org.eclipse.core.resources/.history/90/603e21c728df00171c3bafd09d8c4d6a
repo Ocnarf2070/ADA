@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.math.*;
+
+public class PruebaDosObj {
+	static List<int[]> lista = new ArrayList<int[]>();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int Long = 4;
+		lista.add(new int[Long]);
+		int cont=0;
+		while(cont<Long) {
+			agnadir(cont,Long);
+			cont++;
+		}
+		for(int[] ver : lista)
+		System.out.println(ver);
+	}
+	private static void agnadir(int cont, int tam) {
+		// TODO Auto-generated method stub
+		int[] array = new int[tam];
+		if(cont<tam) {
+			array[cont]=1;
+			lista.add(array.clone());
+			for(int i=cont+1;i<tam;i++) {
+				agnadir(i, tam);
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 
+ * @author ***** David Diaz Roldan *******
+ *
+ */
+public class MochilaFB extends Mochila {
+
+	public SolucionMochila resolver(ProblemaMochila pm) {
+		SolucionMochila sm = null;
+		// Completar la implementacion
+
+		int tam = pm.getItems().size();
+		int[] lista;
+
+		ArrayList<int[]> listas = new ArrayList<int[]>();
+
+		// Primer relleno
+		lista = inicializar(tam);
+		listas.add(lista);
+
+		int cont = 0; // Contador que mide el número de variables que tienen valor 1
+
+		while (cont < tam) {
+			operaciones(cont, lista, listas, tam);
+			lista = inicializar(tam);
+			cont++;
+		}
+
+		for (int i = 0; i < tam; i++) {
+			lista[i] = 1;
+		}
+		listas.add(lista);
+
+		ArrayList<Integer> solucion;
+		sm = new SolucionMochila();
+
+		return sm;
+	}
+
+	private int[] inicializar(int tam) {
+		int[] lista = new int[tam];
+		for (int i = 0; i < tam; i++)
+			lista[i] = 0;
+		return lista;
+	}
+
+	private void operaciones(int cont, int[] lista, ArrayList<int[]> listas, int tam) {
+		while (cont < tam) {
+			lista[cont] = 1;
+			listas.add(lista);
+			cont++;
+		}
+	}
+
+}

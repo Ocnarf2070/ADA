@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;dataStructure&apos; to &apos;dataStructures&apos;&#x0D;&#x0A;- Original element: &apos;dataStructure&apos;&#x0D;&#x0A;- Renamed element: &apos;dataStructure&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;dataStructure&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=dataStructure" name="dataStructures" references="true" stamp="1479330149688" version="1.0"/>
+</session>

@@ -1,0 +1,30 @@
+package prPruebas;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class T5E5 {
+
+	public static void main(String[] args) {
+		int [] k= new int [10];
+		System.out.println("Escribe el array de distancias:");
+		Scanner teclado = new Scanner (System. in);
+		escribirArray(k,teclado);
+		for(int i=0;i<k.length;i++)System.out.print(k[i]+" ");
+	}
+
+	private static void escribirArray(int[] k, Scanner teclado) {
+		int n=0;
+		while(teclado.hasNext()){
+			if(n==k.length){
+				k=Arrays.copyOf(k, k.length*2);
+			}
+			k[n]=teclado.nextInt();
+			n++;
+		}
+		teclado.close();
+		k=Arrays.copyOf(k, n);
+		
+	}
+
+}
